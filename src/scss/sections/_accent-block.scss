@@ -1,0 +1,48 @@
+.accent-block {
+    padding: 50px 0 67px;
+    color: #fff;
+    background: var(--blue);
+    @media (max-width: $mobile) {
+        padding: 40px 0;
+    }
+
+    &__container {
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        color: inherit;
+        font-size: 42px;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__text {
+        max-width: 571px;
+        margin: 0 auto 32px;
+        font-size: 18px;
+        line-height: 122.222%;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+        }
+
+        .button {
+            min-width: 213px;
+            @media (max-width: $mobileSmall) {
+                width: 100%;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,43 @@
+.works {
+    padding: 43px 0 64px;
+    background: #F6F6F6;
+
+    &__container {
+        .title {
+            text-align: center;
+
+            &:not(:last-child) {
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    &__slider {
+        &.swiper {
+            height: 752px;
+            @media (max-width: $mobile) {
+                height: 524px;
+            }
+            @media (max-width: $mobileSmall) {
+                height: 416px;
+            }
+        }
+    }
+
+    &__image {
+        height: 342px;
+        @media (max-width: $mobile) {
+            height: 250px;
+        }
+        @media (max-width: $mobileSmall) {
+            height: 200px;
+        }
+    }
+
+    .navigation {
+        margin-top: 37px;
+    }
+}
+
+
+

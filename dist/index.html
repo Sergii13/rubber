@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <title>Project name</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz@0,6..12;1,6..12&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="wrapper">
+    <h2>Frontend for project</h2>
+
+    <h4>
+        Completed pages
+    </h4>
+    <ol>
+        <li>
+            <a href="home.html">
+                Home page
+            </a>
+        </li>
+    </ol>
+</div>
+<style>
+    .wrapper {
+        max-width: 1000px;
+        padding: 30px 16px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    h4 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    ul, ol {
+        margin: 0;
+        padding-left: 20px;
+
+        li {
+            &::marker {
+                color: #88AB8E;
+            }
+        }
+    }
+
+    a {
+        color: #88AB8E;
+        -webkit-transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        -moz-transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+        &:hover {
+            color: #AFC8AD;
+        }
+
+        &:visited {
+            color: #789461
+        }
+    }
+
+    body {
+        font-family: 'Nunito';
+        color: #001524;
+        background: #F2F1EB;
+    }
+</style>
+</body>
+</html>

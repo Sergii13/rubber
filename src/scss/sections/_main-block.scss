@@ -1,0 +1,85 @@
+.main-block {
+    padding: 130px 0 30px;
+    @media (max-width: $tablet) {
+        padding-top: 60px;
+    }
+
+    &__container {
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__content {
+        width: 54%;
+        flex-shrink: 0;
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+
+        .button {
+            min-width: 246px;
+            height: 62px;
+        }
+    }
+
+    &__title {
+        font-size: 45px;
+        font-weight: 900;
+        text-transform: uppercase;
+        @media (max-width: $tablet) {
+            font-size: 36px;
+        }
+        @media (max-width: $mobileSmall) {
+            font-size: 32px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+            @media (max-width: $tablet) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 30px;
+        max-width: 391px;
+        @media (max-width: $tablet) {
+            font-size: 20px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 37px;
+        }
+    }
+
+    &__image {
+        flex: 1 1 auto;
+        text-align: right;
+        @media (max-width: $mobile) {
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%
+        }
+    }
+}
+

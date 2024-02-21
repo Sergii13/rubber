@@ -1,0 +1,51 @@
+.title {
+    color: var(--blue);
+    font-size: 36px;
+    font-weight: 900;
+    @media (max-width: $tablet) {
+        font-size: 32px;
+    }
+    @media (max-width: $mobile) {
+        font-size: 26px;
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    &__arrow {
+        &.swiper-button-disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: $mobile) {
+            width: 32px;
+            height: 32px;
+        }
+
+        &:hover {
+            svg {
+                stroke: var(--yelllow)
+            }
+        }
+
+        svg {
+            transition: all 0.2s ease;
+            stroke: var(--blue)
+        }
+    }
+
+    &__arrow--prev {
+    }
+
+    &__arrow--next {
+    }
+}

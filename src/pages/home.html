@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> _head title='Homepage'}}
+<body>
+<div class="wrapper">
+    {{> _header }}
+    <main class="page">
+        <section class="main-block">
+            <div class="main-block__container">
+                <div class="main-block__row">
+                    <div class="main-block__content">
+                        <h1 class="main-block__title">
+                            Lorem ipsum dolor sit amet consectetur
+                        </h1>
+                        <div class="main-block__text">
+                            <p>Lorem ipsum dolor sit amet . Maecenas felis sem, fringilla sit amet</p>
+                        </div>
+                        <a href="" class="button button--primary">Buy Now</a>
+                    </div>
+                    <div class="main-block__image">
+                        <img src="../img/big.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="order">
+            <div class="order__container">
+                <div class="order__row">
+                    <div class="order__content">
+
+                        <h2 class="title">
+                            <span class="order__decor">
+                                <img src="../img/decor.png" alt="">
+                            </span>
+                            We made ordering mulch a breeze. Use our calculator to place an order.
+                        </h2>
+                        <ul>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Calculate how much rubber mulch you need.</p></li>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Our calculator will show you the quantity and price.</p></li>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Click add to cart to check out.</p></li>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Fill in your billing, shipping, payment information.</p></li>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Place your order!</p></li>
+                        </ul>
+                    </div>
+                    <form action="#" class="order__form">
+                        <div class="order__form-title">Calculate and Check Out</div>
+                        <div class="order__form-items">
+                            <div class="order__form-item order__form-item_required w-100">
+                                <select data-pseudo-label="*" name="form[]" class="form">
+                                    <option value="" selected>Select Color</option>
+                                    <option value="1">Red</option>
+                                    <option value="2">Blue</option>
+                                    <option value="3">Grey</option>
+                                </select>
+                            </div>
+                            <div class="order__form-item order__form-item_required w-100">
+                                <select data-pseudo-label="*" name="form[]" class="form">
+                                    <option value="" selected>Select Dimensions</option>
+                                    <option value="1">Red</option>
+                                    <option value="2">Blue</option>
+                                    <option value="3">Grey</option>
+                                </select>
+                            </div>
+                            <div class="order__form-item order__form-item_required w-100">
+                                <select data-pseudo-label="*" name="form[]" class="form">
+                                    <option value="">Select Depth</option>
+                                    <option value="1">Red</option>
+                                    <option value="2">Blue</option>
+                                    <option value="3">Grey</option>
+                                </select>
+                            </div>
+                            <div class="order__form-item order__form-item_required">
+                                <label class="input-item">
+                                    <input type="text" class="input">
+                                    <span class="input-item__placeholder">
+                                        Length (ft.)<small>*</small>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="order__form-item order__form-item_required ">
+                                <label class="input-item">
+                                    <input type="text" class="input">
+                                    <span class="input-item__placeholder">
+                                        Width (ft.)<small>*</small>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="order__form-btn button button--secondary">
+                            Calculate
+                        </button>
+                        <div class="order__form-bottom">
+                            <div class="order__form-info">
+                                Mulch needed
+                            </div>
+                            <div class="order__form-info">
+                                Mulch cost
+                            </div>
+                            <button class="order__form-to-cart">
+                                Add to cart
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__container">
+                <div class="about__row">
+                    <div class="about__image pc">
+                        <img src="../img/about.jpg" alt="" class="ibg">
+                    </div>
+                    <div class="about__content">
+                        <h2 class="title">Lorem ipsum dolor sit amet
+                            sit amet</h2>
+                        <div class="about__image mob">
+                            <img src="../img/about.jpg" alt="" class="ibg">
+                        </div>
+                        <div class="about__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis lacus et dui
+                            sagittis, ac ultrices purus consectetur. consectetur adipiscing elit.
+                        </div>
+                        <ul>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                            <li><img src="../img/svg/arrow.svg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                        </ul>
+                        <button class="about__btn button button--primary">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="works">
+            <div class="works__container">
+                <h2 class="title">Lorem ipsum dolor sit amet</h2>
+                <div class="works__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/02.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/02.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/02.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/02.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/02.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="works__image">
+                                <img class="ibg" src="../img/02.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="navigation">
+                    <button class="navigation__arrow navigation__arrow--prev">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22.0843" cy="21.8894" r="18.9148" transform="rotate(-180 22.0843 21.8894)"
+                                    fill="white" stroke-width="5"/>
+                            <path d="M28.147 12.314L16.0219 21.8896L28.147 31.4652"
+                                  stroke-width="5"/>
+                        </svg>
+                    </button>
+                    <button class="navigation__arrow navigation__arrow--next">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22.0495" cy="21.8899" r="18.9148" fill="white"
+                                    stroke-width="5"/>
+                            <path d="M15.9868 31.4651L28.1119 21.8894L15.9868 12.3138"
+                                  stroke-width="5"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="accent-block">
+            <div class="accent-block__container">
+                <div class="accent-block__content">
+                    <h2 class="accent-block__title title">Lorem ipsum dolor sit sit amet Lorem </h2>
+                    <div class="accent-block__text">Lorem ipsum dolor sit ametNullam iaculis lacus et dui sagittis, ac
+                        ultrices purus consectetur. Phasellus
+                    </div>
+                    <div class="accent-block__buttons">
+                        <button class="button button--primary">
+                            Buy Now
+                        </button>
+                        <button class="button button--white">
+                            Request Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="reviews__container">
+                <h2 class="title">
+                    Lorem ipsum dolor sit amet
+                </h2>
+                <div class="reviews__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="reviews__item">
+                                <div class="reviews__item-avatar">
+                                    <img class="ibg" src="../img/avatar.jpg" alt="">
+                                </div>
+                                <div class="reviews__item-content">
+                                    <div class="reviews__item-rating">
+                                        <img src="../img/svg/rating.svg" alt="">
+                                    </div>
+                                    <div class="reviews__item-subtitle">
+                                        <b> Lorem ipsum dolor sit</b> / Lorem ipsum
+                                    </div>
+                                    <div class="reviews__item-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis lacus et
+                                        dui sagittis, ac ultrices purus consectetur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__item">
+                                <div class="reviews__item-avatar">
+                                    <img class="ibg" src="../img/avatar.jpg" alt="">
+                                </div>
+                                <div class="reviews__item-content">
+                                    <div class="reviews__item-rating">
+                                        <img src="../img/svg/rating.svg" alt="">
+                                    </div>
+                                    <div class="reviews__item-subtitle">
+                                        <b> Lorem ipsum dolor sit</b> / Lorem ipsum
+                                    </div>
+                                    <div class="reviews__item-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis lacus et
+                                        dui sagittis, ac ultrices purus consectetur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__item">
+                                <div class="reviews__item-avatar">
+                                    <img class="ibg" src="../img/avatar.jpg" alt="">
+                                </div>
+                                <div class="reviews__item-content">
+                                    <div class="reviews__item-rating">
+                                        <img src="../img/svg/rating.svg" alt="">
+                                    </div>
+                                    <div class="reviews__item-subtitle">
+                                        <b> Lorem ipsum dolor sit</b> / Lorem ipsum
+                                    </div>
+                                    <div class="reviews__item-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis lacus et
+                                        dui sagittis, ac ultrices purus consectetur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__item">
+                                <div class="reviews__item-avatar">
+                                    <img class="ibg" src="../img/avatar.jpg" alt="">
+                                </div>
+                                <div class="reviews__item-content">
+                                    <div class="reviews__item-rating">
+                                        <img src="../img/svg/rating.svg" alt="">
+                                    </div>
+                                    <div class="reviews__item-subtitle">
+                                        <b> Lorem ipsum dolor sit</b> / Lorem ipsum
+                                    </div>
+                                    <div class="reviews__item-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis lacus et
+                                        dui sagittis, ac ultrices purus consectetur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__item">
+                                <div class="reviews__item-avatar">
+                                    <img class="ibg" src="../img/avatar.jpg" alt="">
+                                </div>
+                                <div class="reviews__item-content">
+                                    <div class="reviews__item-rating">
+                                        <img src="../img/svg/rating.svg" alt="">
+                                    </div>
+                                    <div class="reviews__item-subtitle">
+                                        <b> Lorem ipsum dolor sit</b> / Lorem ipsum
+                                    </div>
+                                    <div class="reviews__item-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis lacus et
+                                        dui sagittis, ac ultrices purus consectetur.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="navigation__arrow navigation__arrow--prev">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22.0843" cy="21.8894" r="18.9148" transform="rotate(-180 22.0843 21.8894)"
+                                    fill="white" stroke-width="5"/>
+                            <path d="M28.147 12.314L16.0219 21.8896L28.147 31.4652"
+                                  stroke-width="5"/>
+                        </svg>
+                    </button>
+                    <button class="navigation__arrow navigation__arrow--next">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22.0495" cy="21.8899" r="18.9148" fill="white"
+                                    stroke-width="5"/>
+                            <path d="M15.9868 31.4651L28.1119 21.8894L15.9868 12.3138"
+                                  stroke-width="5"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    {{> _footer }}
+</div>
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

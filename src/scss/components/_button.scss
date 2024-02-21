@@ -1,0 +1,45 @@
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 8px;
+    height: 50px;
+    padding: 5px 20px;
+    cursor: pointer;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        }
+    }
+    @media (max-width: $tablet) {
+        font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+        font-size: 16px;
+        height: 44px;
+    }
+}
+
+.button--primary {
+    color: var(--blue);
+    background: linear-gradient(0deg, #FFBF27 0%, #FFBF27 100%), #909090;
+}
+
+.button--secondary {
+    color: #fff;
+    background: var(--blue);
+}
+
+.button--white {
+    color: var(--blue);
+    background: #E4E4E4;;
+}
+
+
+
+

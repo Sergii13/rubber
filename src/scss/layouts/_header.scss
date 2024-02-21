@@ -1,0 +1,236 @@
+.header {
+    &__top {
+        background: var(--blue);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 8px 0;
+        position: relative;
+        z-index: 4;
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
+    }
+
+    &__container {
+        max-width: 1330px;
+    }
+
+    &__top-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    &__top-left-text {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__top-center-text {
+    }
+
+    &__top-right {
+    }
+
+    &__top-phone {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: var(--yelllow);
+        }
+    }
+
+    &__bottom {
+        padding: 13px 0;
+    }
+
+    &__bottom-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    &__logo {
+        display: inline-block;
+        position: relative;
+        z-index: 4;
+    }
+
+    &__menu {
+
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    @media (max-width: $mobile) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 3;
+        flex-direction: column;
+        padding: 100px 20px 50px;
+        overflow-y: auto;
+        gap: 40px;
+        transform: translateX(100%);
+        .menu-open & {
+            transform: translateX(0);
+        }
+    }
+
+    &__body {
+    }
+
+    &__list {
+        display: flex;
+        gap: 10px 40px;
+        @media (max-width: $tablet) {
+            gap: 10px 16px;
+        }
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    &__item {
+    }
+
+    &__link {
+        transition: all 0.2s ease;
+        @media (max-width: $tablet) {
+            font-size: 14px;
+        }
+        @media (max-width: 900px) {
+            font-size: 12px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            display: block;
+            text-align: center;
+        }
+
+        &:hover {
+            color: var(--blue);
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-left: 31px;
+        @media (max-width: $tablet) {
+            padding-left: 20px;
+            gap: 14px;
+        }
+    }
+
+    &__cart {
+        cursor: pointer;
+        position: relative;
+        padding: 10px;
+
+        &:hover {
+            svg {
+                fill: var(--yelllow)
+            }
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+
+            fill: var(--blue)
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    }
+
+    &__calculator {
+        min-width: 207px;
+        @media (max-width: $tablet) {
+            min-width: 150px;
+        }
+
+        &.button {
+            height: 40px;
+        }
+    }
+}
+
+.icon-menu {
+    outline: none;
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+    }
+    position: relative;
+    width: 30px;
+    height: 16px;
+    z-index: 6;
+    @media (any-hover: none) {
+        cursor: default;
+    }
+
+    span,
+    &::before,
+    &::after {
+        content: "";
+        transition: all 0.3s ease 0s;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--blue);
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    span {
+        top: calc(50% - 1px);
+    }
+
+    .menu-open & {
+        span {
+            width: 0;
+        }
+
+        &::before,
+        &::after {
+        }
+
+        &::before {
+            top: calc(50% - 1px);
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            bottom: calc(50% - 1px);
+            transform: rotate(45deg);
+        }
+    }
+}

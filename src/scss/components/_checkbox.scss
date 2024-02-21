@@ -1,0 +1,27 @@
+.checkbox {
+    position: relative;
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:checked + .checkbox__label {
+            background: #3862EC;
+
+        }
+    }
+
+
+    &__label {
+        cursor: pointer;
+        display: inline-flex;
+        position: relative;
+    }
+
+    &__text {
+    }
+}
+
+
