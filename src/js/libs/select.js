@@ -1,7 +1,6 @@
-// Підключення функціоналу "Чортоги Фрілансера"
 import { _slideToggle, _slideUp } from "../files/functions.js";
 
-class SelectConstructor {
+export class SelectConstructor {
   constructor(props, data = null) {
     let defaultConfig = {
       init: true,
@@ -44,7 +43,11 @@ class SelectConstructor {
         : document.querySelectorAll("select");
       if (selectItems.length) {
         this.selectsInit(selectItems);
+        this.setLogging(
+          `Прокинувся, построїв селектов: (${selectItems.length})`
+        );
       } else {
+        this.setLogging("Сплю, немає жодного select");
       }
     }
   }
@@ -528,10 +531,9 @@ class SelectConstructor {
   // Конструктор конкретного елемента списку
   getOption(selectOption, originalSelect) {
     // Якщо елемент вибрано та увімкнено режим мультивибору, додаємо клас
-    const selectOptionSelected =
-      selectOption.selected && originalSelect.multiple
-        ? ` ${this.selectClasses.classSelectOptionSelected}`
-        : "";
+    const selectOptionSelected = selectOption.selected
+      ? ` ${this.selectClasses.classSelectOptionSelected}`
+      : "";
     // Якщо елемент вибраний і немає налаштування data-show-selected, приховуємо елемент
     const selectOptionHide =
       selectOption.selected &&
@@ -646,9 +648,7 @@ class SelectConstructor {
       if (originalSelect.multiple) {
         // Якщо мультивибір
         // Виділяємо класом елемент
-        optionItem.classList.toggle(
-          this.selectClasses.classSelectOptionSelected
-        );
+
         // Очищаємо вибрані елементи
         const originalSelectSelectedItems =
           this.getSelectedOptionsData(originalSelect).elements;
@@ -669,6 +669,16 @@ class SelectConstructor {
       } else {
         // Якщо одиничний вибір
         // Якщо не вказано налаштування data-show-selected, приховуємо вибраний елемент
+        selectItem
+          .querySelectorAll(
+            `${this.getSelectClass(this.selectClasses.classSelectOption)}`
+          )
+          .forEach((selectOption) => {
+            selectOption.classList.remove(
+              this.selectClasses.classSelectOptionSelected
+            );
+          });
+        optionItem.classList.add(this.selectClasses.classSelectOptionSelected);
         if (!originalSelect.hasAttribute("data-show-selected")) {
           setTimeout(() => {
             // Спочатку все показати
@@ -686,12 +696,14 @@ class SelectConstructor {
               ).hidden = false;
             }
             // Приховуємо вибрану
+
             optionItem.hidden = true;
           }, this.config.speed);
         }
         originalSelect.value = optionItem.hasAttribute("data-value")
           ? optionItem.dataset.value
           : optionItem.textContent;
+
         this.selectAction(selectItem);
       }
       //Оновлюємо заголовок селекту
@@ -788,7 +800,5 @@ class SelectConstructor {
   }
 
   // Логінг у консоль
+  setLogging(message) {}
 }
-
-// Запускаємо та додаємо в об'єкт модулів
-new SelectConstructor({});

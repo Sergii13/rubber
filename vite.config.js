@@ -70,7 +70,7 @@ export default defineConfig({
     rollupOptions: {
       input: Object.fromEntries(
         glob
-          .sync(["./src/pages/*.html", "./*.html"])
+          .sync(["./*.html", "./src/pages/**/*.html"])
           .map((file) => [
             path.relative(
               __dirname,
@@ -80,8 +80,8 @@ export default defineConfig({
           ])
       ),
       output: {
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
+        chunkFileNames: "assets/js/main-[hash].js",
+        entryFileNames: "assets/js/main-[hash].js",
 
         assetFileNames: ({ name }) => {
           if (/\.(gif|jpe?g|png|svg)$/.test(name ?? "")) {
@@ -92,7 +92,7 @@ export default defineConfig({
           }
 
           if (/\.css$/.test(name ?? "")) {
-            return "assets/css/[name]-[hash][extname]";
+            return "assets/css/main-[hash][extname]";
           }
 
           return "assets/[name]-[hash][extname]";
@@ -101,9 +101,6 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@img": fileURLToPath(new URL("./src/img", import.meta.url)),
-    },
+    alias: {},
   },
 });
